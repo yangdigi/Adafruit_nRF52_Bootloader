@@ -31,18 +31,16 @@
 /* LED
  *------------------------------------------------------------------*/
 #define LEDS_NUMBER           1
-#define LED_PRIMARY_PIN       _PINNUM(1, 10)
+#define LED_PRIMARY_PIN       _PINNUM(1, 10) //default LED
 #define LED_STATE_ON          1 // State when LED is lit (active HIGH)
-
-#define NEOPIXELS_NUMBER      0
 
 /*------------------------------------------------------------------*/
 /* BUTTON
  *------------------------------------------------------------------*/
-#define BUTTONS_NUMBER        2
-#define BUTTON_1              _PINNUM(1, 2) // DFU
-#define BUTTON_2              _PINNUM(0, 12) // FRST
-#define BUTTON_PULL           NRF_GPIO_PIN_PULLUP
+#define BUTTONS_NUMBER    2  // none connected at all
+#define BUTTON_1          _PINNUM(0, 18)  // unusable: RESET
+#define BUTTON_2          _PINNUM(0, 19)  // no connection
+#define BUTTON_PULL       NRF_GPIO_PIN_PULLUP
 
 //--------------------------------------------------------------------+
 // BLE OTA
@@ -52,11 +50,10 @@
 
 //--------------------------------------------------------------------+
 // USB
-// Shared VID/PID with nRFMicro
 //--------------------------------------------------------------------+
 #define USB_DESC_VID           0x239A
-#define USB_DESC_UF2_PID       0x5284
-#define USB_DESC_CDC_ONLY_PID  0x5284
+#define USB_DESC_UF2_PID       0x5944
+#define USB_DESC_CDC_ONLY_PID  0x5944
 
 //------------- UF2 -------------//
 #define UF2_PRODUCT_NAME   "YDKB Klink nRF52840"
